@@ -33,7 +33,7 @@ dojo.declare('myapp.Bat', [dijit._Widget, dijit._Templated], {
     postMixInProperties: function() {
 		//initialize jsonic from unc open web
 		//uow.getAudio({defaultCaching: true}).then(dojo.hitch(this, function(js) { this.js = js; }));
-		this.speed = 2;
+		this.speed = 3;
 		this.mode = "intro";
 		this.row = 3;
 		this.oldrow = 3;
