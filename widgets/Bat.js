@@ -33,7 +33,7 @@ dojo.declare('myapp.Bat', [dijit._Widget, dijit._Templated], {
     postMixInProperties: function() {
 		//initialize jsonic from unc open web
 		//uow.getAudio({defaultCaching: true}).then(dojo.hitch(this, function(js) { this.js = js; }));
-		this.speed = 5;
+		this.speed = 2;
 		this.mode = "intro";
 		this.row = 3;
 		this.oldrow = 3;
@@ -50,7 +50,7 @@ dojo.declare('myapp.Bat', [dijit._Widget, dijit._Templated], {
 		this.bump = 0;
 		this.previous = [1,2,3,4,5];
 		this.secondTime = 167/this.speed*5;
-		this.blocksVisible = false;
+		this.blocksVisible = true;
 		this.sounds = [];
 		this.soundCount = 1;
 		this.buttons = [];
