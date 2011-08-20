@@ -33,7 +33,7 @@ dojo.declare('myapp.Bat', [dijit._Widget, dijit._Templated], {
     postMixInProperties: function() {
 		//initialize jsonic from unc open web
 		//uow.getAudio({defaultCaching: true}).then(dojo.hitch(this, function(js) { this.js = js; }));
-		this.speed = 3;
+		this.speed = 5;
 		this.mode = "intro";
 		this.row = 3;
 		this.oldrow = 3;
@@ -49,7 +49,7 @@ dojo.declare('myapp.Bat', [dijit._Widget, dijit._Templated], {
 		this.soundX = 0;
 		this.bump = 0;
 		this.previous = [1,2,3,4,5];
-		this.secondTime = 167/this.speed*5;
+		this.secondTime = 84/this.speed*5;
 		this.blocksVisible = true;
 		this.sounds = [];
 		this.soundCount = 1;
@@ -108,7 +108,7 @@ dojo.declare('myapp.Bat', [dijit._Widget, dijit._Templated], {
 					}
 				} else {
 					this.mode = "play";
-					this.secondTime = 167/this.speed*5;
+					this.secondTime = 84/this.speed*5;
 					this.countTime = this.secondTime;
 					this.row = 3;
 					this.seconds = 0;
@@ -181,7 +181,7 @@ dojo.declare('myapp.Bat', [dijit._Widget, dijit._Templated], {
 	},
 	startTimer: function(e) {
 		var t = new dojox.timing.Timer();
-		t.setInterval(1);
+		t.setInterval(20);
 		t.onTick = dojo.hitch(this,function() {
 			if (this.mode != "play") {
 				t.stop();
